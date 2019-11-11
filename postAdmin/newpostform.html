@@ -1,0 +1,89 @@
+<!-- 
+    Document   : LAMP final New form page
+    Created on : Feb 6, 2019, 3:16 PM
+    Author     : Ruth Holley
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+         <title>New Post Form</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+    <h1>New Post Form</h1>
+
+    
+     <!-- The data encoding type, enctype, MUST be specified as below-->
+<form method="POST" action="addPost.php">
+<br>SubCategory:
+<!--Create drop down for Sub-Category selection-->
+<select name="SubCategory">
+	<option>Books</option>
+	<option>Electronics</option>
+	<option>Household</option>
+	<option>Computer</option>
+	<option>Financial</option>
+	<option>Lessions</option>
+	<option>Full-Time</option>
+	<option>Part-Time</option>
+	<option>Volunteering</option>
+</select>
+<br>
+    <!--Create drop down for Location selection-->
+<br>Locations:
+<select name="Location">
+	<option>San Jose</option>
+	<option>London</option>
+	<option>Quebec City</option>
+</select>
+<br>
+
+<!--Create form entry for Title-->
+	<br>Title: <input type="text" name="Title">
+	<br>
+
+<!--Create form entry for Price-->
+<br>Price: <input type="text" name="Price">
+	<br>
+
+
+<!--Create text box for Description-->
+<br>Description:<br><textarea name="Description" rows="10" cols="60"></textarea>
+
+
+<!--Create text box for email Confusion on wheither email validation php code should be in a seperate file-->
+<br> Email:
+<input type="email" name="Email">
+<br>
+<br>Confirm Email:
+<input type="email" name="Confirm email">
+<br>
+<br>
+<!--add chechbox for Terms and Conditions-->
+I agree with terms and conditions
+<input name="Terms" type="checkbox">
+<br>
+
+<!--Code to upload an image file-->
+
+  <p>Optional fields:</p>
+ <!--The data encoding type, enctype, MUST be specified as below-->
+  <form enctype="multipart/form-data" action="file_upload.php" method="POST">
+    <!--MAX_FILE_SIZE must precede the file input field-->
+    <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+    <!-- Name of input element determines name in $_FILES array-->
+    <p>Image 1 (max 5 MB): <input name="userfile" type="file"/></p>
+      
+    
+<p>Image 2 (max 5 MB):<input name="userfile" type="file"/></p>
+
+<p>Image 3 (max 5 MB):<input name="userfile" type="file"/></p>
+
+<p>Image 4 (max 5 MB):<input name="userfile" type="file"/></p>
+<br>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</form>
+  </body>
+</html>
+
